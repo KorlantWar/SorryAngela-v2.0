@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANGELA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Old+Standard+TT&display=swap');
+        
+        body {
+            font-family: 'Old Standard TT', serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.6;
+            background-image: url('https://i.gifer.com/5Kkr.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 0;
+            border: 1px solid #8B0000;
+            box-shadow: 0 0 20px #8B0000;
+            padding: 25px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #8B0000, #000, #8B0000);
+        }
+        
+        .container::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #8B0000, #000, #8B0000);
+        }
+        
+        h1 {
+            color: #8B0000;
+            text-align: center;
+            font-family: 'MedievalSharp', cursive;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(139, 0, 0, 0.7);
+            letter-spacing: 3px;
+        }
+        
+        .soundcloud-player {
+            width: 100%;
+            height: 166px;
+            margin-bottom: 30px;
+            border: 1px solid #8B0000;
+        }
+        
+        .acrostic {
+            margin-bottom: 30px;
+            border-left: 3px solid #8B0000;
+            padding-left: 15px;
+        }
+        
+        .letter {
+            font-weight: bold;
+            font-size: 2em;
+            color: #8B0000;
+            margin-right: 10px;
+            font-family: 'MedievalSharp', cursive;
+            text-shadow: 0 0 5px rgba(139, 0, 0, 0.5);
+            float: left;
+            line-height: 1;
+        }
+        
+        .line {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: flex-start;
+            overflow: hidden;
+            min-height: 30px;
+        }
+        
+        .message {
+            background-color: rgba(20, 20, 20, 0.7);
+            padding: 20px;
+            border-radius: 0;
+            margin-top: 30px;
+            border-left: 5px solid #8B0000;
+            position: relative;
+        }
+        
+        .message::before {
+            content: "✝";
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            font-size: 30px;
+            color: #8B0000;
+        }
+        
+        .signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 30px;
+            color: #aaa;
+            border-top: 1px dashed #8B0000;
+            padding-top: 15px;
+        }
+        
+        .rose-decoration {
+            position: absolute;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        .rose1 {
+            top: 10px;
+            right: 10px;
+            transform: rotate(20deg);
+        }
+        
+        .rose2 {
+            bottom: 10px;
+            left: 10px;
+            transform: rotate(-15deg);
+        }
+
+        .rose3 {
+            top: 10px;
+            left: 10px;
+            transform: rotate(-15deg);
+        }
+        
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 10px;
+            border-radius: 50%;
+            border: 1px solid #8B0000;
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        .music-control i {
+            color: #8B0000;
+            font-size: 20px;
+        }
+        
+        @media (max-width: 400px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .soundcloud-player {
+                height: 132px;
+            }
+
+            .header-gif {
+                max-height: 100px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Decoración de rosas -->
+    <img src="https://i5.glitter-graphics.org/pub/215/215155oe6c8ee608.gif" class="rose-decoration rose1" width="80">
+    <img src="https://i5.glitter-graphics.org/pub/215/215155oe6c8ee608.gif" class="rose-decoration rose2" width="80">
+    <img src="https://i5.glitter-graphics.org/pub/215/215155oe6c8ee608.gif" class="rose-decoration rose3" width="80">
+    
+    <div class="container"> 
+        <p style="text-align: center;">Para reproducir, presiona a "Listen in browser"</p>
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/276952855&color=%23781414&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/yanal-shmilan" title="Yanal Shmilan" target="_blank" style="color: #cccccc; text-decoration: none;">Yanal Shmilan</a> · <a href="https://soundcloud.com/yanal-shmilan/snuff-slipknot" title="Snuff - Slipknot" target="_blank" style="color: #cccccc; text-decoration: none;">Snuff - Slipknot</a></div>
+        <br> 
+        <img src="https://i.gifer.com/Dp9Q.gif" class="header-gif" alt="Gótico animado" style="display: block; margin: 0 auto;">
+        <h1>ANGELA</h1>
+        <!-- Reproductor de SoundCloud -->
+        <!--<iframe class="soundcloud-player" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/182932228&color=%238B0000&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe> -->
+        <div class="acrostic">
+            <div class="line">
+                <span class="letter">A</span>
+                <div>unque mis errores hayan sido grandes, tu perdón espero con ansias.</div>
+            </div>
+            <div class="line">
+                <span class="letter">N</span>
+                <div>ada sería igual sin tu presencia.</div>
+            </div>
+            <div class="line">
+                <span class="letter">G</span>
+                <div>uardo en mi corazón cada instante que estuve contigo.</div>
+            </div>
+            <div class="line">
+                <span class="letter">E</span>
+                <div>res luz en mi oscuridad, especial eres en verdad.</div>
+            </div>
+            <div class="line">
+                <span class="letter">L</span>
+                <div>o siento por haberte fallado, y por no haberlo valorado.</div>
+            </div>
+            <div class="line">
+                <span class="letter">A</span>
+                <div>gradezco tu paciencia infinita, ángel que en mi vida habita.</div>
+            </div>
+        </div>
+        
+        <div class="message">
+            <p style="text-align: justify;">Quiero disculparme sinceramente por desaparecer y por haberte fallado esas dos veces. No hay excusas que justifiquen mis acciones, pero quiero que sepas que gracias a esos errores, me di cuenta de la importancia que tienes en mi vida.</p>
+            <p style="text-align: justify;">Eres una persona increíble y valiosa, y no quiero perder tu amistad. Aprecio cada momento que compartimos y prometo ser mejor para no defraudarte nuevamente.</p>
+            <p style="text-align: justify;">Se que no soy muy expresivo e inclusive un poco frio, me encantaría explicarte las razones por las que talvez soy así, igualmente siempre trato de cambiar eso, aunque no lo creas y pienses que es floro, jamás hubiera sido capaz de hacer esto por alguien, no es una justificación, pero espero me comprendas.</p>              
+            <p style="text-align: justify;">Gracias por tu paciencia y espero que me des la oportunidad de enmendar mis errores.</p>
+        </div>
+        
+        <div class="signature">
+            <p>Con cariño,</p>
+            <p>Korlant</p>
+            <img src="https://i1.glitter-graphics.org/pub/1057/1057451vlkas08b3n.gif" class="header-gif" alt="Gótico animado" style="display: block; margin: 0 auto;">
+            <p style="text-align: center;">Siempre quise usar este gif xd</p>
+        </div>
+    </div>
+          
+    <script>
+        const music = document.getElementById('bgMusic');
+        let isPlaying = false;
+        
+        // Función para reproducir/pausar
+        function toggleMusic() {
+            if (isPlaying) {
+                music.pause();
+            } else {
+                music.play();
+            }
+            isPlaying = !isPlaying;
+        }
+        
+        // Para móviles: la reproducción automática está bloqueada, así que necesitamos interacción del usuario
+        document.body.addEventListener('click', function initAudio() {
+            if (!isPlaying) {
+                music.volume = 0.3;
+                toggleMusic();
+            }
+            document.body.removeEventListener('click', initAudio);
+        });
+    </script>
+</body>
+</html>
